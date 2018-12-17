@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#checking for errors
 if [ $# -ne 2 ]
 then
 #echo "invalid no"
@@ -14,6 +15,7 @@ then
 exit -1
 fi
 
+#picking the line which contains $2, and printing 5th field with : as delim
 grep "$2" $1 | cut -d':' -f5
 
 exit 0 
