@@ -4,7 +4,7 @@ if [[ ($# -ne 1) && ($# -ne 2) ]]
 then
 exit -1
 
-elif [ ! -d $1 ]
+elif [[ (! -d $1) || (! -r $1) ]]
 then
 exit -1
 
